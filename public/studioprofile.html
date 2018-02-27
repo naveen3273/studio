@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="js/angular.min.js"></script>
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Create Studio Profile</title>
+
+  <!-- Bootstrap Core CSS -->
+  <link href="css/sidebar/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link href="css/sidebar/css/simple-sidebar.css" rel="stylesheet">
+  <script type="text/javascript" src="/appStart/app/js/createProfileStudio.js"></script>
+  <link rel="stylesheet" href="css/main.css">
+  <style type="text/css">
+    input[type="checkbox"]{
+      width: 18px; /*Desired width*/
+      height: 18px; /*Desired height*/
+      cursor: pointer;
+      -webkit-appearance: checkbox;
+    }
+  </style>
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+      </head>
+
+      <body ng-app="studioProfileCreation" ng-controller="studioProfileCreationCtrl">
+
+        <div id="wrapper">
+
+          <!-- Sidebar -->
+          <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+              <li class="sidebar-brand">
+                <a href="#">
+                  Start Bootstrap
+                </a>
+              </li>
+              <li>
+                <a href="#">Dashboard</a>
+              </li>
+              <li>
+                <a href="#">Shortcuts</a>
+              </li>
+              <li>
+                <a href="#">Overview</a>
+              </li>
+              <li>
+                <a href="#">Events</a>
+              </li>
+              <li>
+                <a href="#">About</a>
+              </li>
+              <li>
+                <a href="#">Services</a>
+              </li>
+              <li>
+                <a href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <!-- /#sidebar-wrapper -->
+
+          <!-- Page Content -->
+          <div id="page-content-wrapper">
+            <nav class="navbar navbar-default navbar-fixed-top">
+              <div class="container">
+                <ul class="nav navbar-nav" style="float: left;">
+                  <li>
+                    <a href="you.html">
+                      <span class="glyphicon glyphicon-chevron-left"></span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#"><b>CREATE PROFILE</b></a>
+                  </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                  <li>
+                    <a ng-click="createStudioProfile(studioProfile,selectedEvents)"><b> Save </b></a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+            <div class="container" style="padding-top: 70px;padding-bottom: 20px;">
+              <div class="row">
+                <div class="col-lg-12">
+                  <form name="studioProfileform" ng-submit="studioProfileform.$valid" novalidate>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1"><small>Studio Name</small></label>
+                      <input type="text" class="form-control" name = "studioName" id="exampleInputEmail1" ng-model="studioProfile.studioName" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1"><small>Location</small></label>
+                      <input type="text" class="form-control" name = "studioLocation"  id="exampleInputPassword1" ng-model="studioProfile.location" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1"><small>Facebook Page Url</small></label>
+                      <input type="text" class="form-control" name = "studioFacebookProfileuUrl"   ng-model="studioProfile.fbUrl" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1"><small>Official Portfolio / Website</small></label>
+                      <input type="text" class="form-control" name = "studioOfficialUrl" ng-model="studioProfile.officialWebsiteUrl" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1"><small>Email Address</small></label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" ng-model="studioProfile.studioeMailAddress" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1"><small>Phone Number</small></label>
+                      <input type="text" class="form-control" id="exampleInputEmail1" ng-model="studioProfile.studioPhoneNumber" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1"><small>Works For</small></label>
+                      <br/>
+                      <span ng-repeat="events in allEvents">
+                        <input type="checkbox" ng-model = "studioProfile.allEvents[events.eventId]"> 
+                        {{events.eventType}}
+                        <br/>
+                      </span>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1"><small>Available On</small></label>
+                       <br/>
+                      <span ng-repeat="availability in allAvailabilities">
+                        <input type="radio" ng-model="studioProfile.selectedAvailability" ng-value="availability"> 
+                        {{availability.availabilityType}}
+                        <br/>
+                      </span>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /#page-content-wrapper -->
+
+        </div>
+        <!-- /#wrapper -->
+
+        <!-- jQuery -->
+        <script src="css/sidebar/js/jquery.js"></script>
+
+        <!-- Bootstrap Core JavaScript -->
+        <script src="css/sidebar/js/bootstrap.min.js"></script>
+        <script src="js/holder.js" charset="utf-8"></script>
+        <!-- Menu Toggle Script -->
+        <script>
+          $(".collapsed").click(function(e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+          });
+        </script>
+
+      </body>
+
+      </html>

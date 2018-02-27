@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="js/angular.min.js"></script>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Home</title>
+
+    <!--Extra-->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.transitions.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js" />
+    <script data-require="jquery@2.1.3" data-semver="2.1.3" src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+    <!--End Extra-->
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/sidebar/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/sidebar/css/simple-sidebar.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script type="text/javascript" src="/appStart/app/js/home.js"></script>
+
+    <link rel="stylesheet" href="js/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="js/assets/owl.theme.default.min.css">
+
+</head>
+
+<body ng-app="homeModule" ng-controller="homeCtrl">
+
+    <div id="wrapper">
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper" style="padding: 0px;">
+            <nav class="navbar navbar-default navbar-fixed-top">
+                <div class="container-fluid" style="padding: 0px; background: #16a085">
+                    <div class="container">
+                        <ul class="list-inline primary-nav pull-left">
+                            <li><a href="">Studio Finder</a></li>
+                        </ul>
+
+                        <ul class="list-inline primary-nav pull-right">
+                            <li>
+                                <a href="">
+                    <span class="glyphicon glyphicon-search"></span>
+                  </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="container-fluid" style="padding: 0px;">
+                    <div class="container">
+                        <ul class="list-inline">
+                            <li class="active"><a href="">Home</a></li>
+                            <li><a href="allrequests.html">Requests</a></li>
+                            <li><a href="you.html">You</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="container-fluid" style="margin-top: 100px; background: #f5f5f5; margin-bottom: 10px;">
+                <div class="container">
+                    <div class="row" style="margin-top: 20px;">
+                        <div class="col-lg-12">
+                            <div style="color: #999; letter-spacing: 0.1em; font-size: 12px; overflow: auto;">
+                                <p class="pull-left"><span class="glyphicon glyphicon-time"></span>TOP RATED</p>
+                                <p class="pull-right">VIEW ALL</p>
+                            </div>
+                            <data-owl-carousel class="owl-carousel" data-options="{navigation: true, pagination: true, rewindNav : true}">
+                                <div owl-carousel-item="" ng-repeat="studio in allStudios" class="item">
+                                    <a href="cards.html">
+                                        <div class="thumbnail" style="padding: 0px; margin: 16px 2px; border: none;">
+                                            <!-- <img src="imgs/beard_man.jpg" class="img-rounded"> -->
+                                            <div style="background: url('imgs/beard_man3.jpeg'); background-size: cover; width: 100%; height: 140px; border-radius: 4px;"></div>
+                                            <div class="caption" style="padding: 0px; overflow: auto;">
+                                                <div style="position: absolute; bottom: 65px; width: 100%; padding: 5px 10px; color: #fff; border-bottom-left-radius: 4px;border-bottom-right-radius: 4px;">
+                                                    <h5 class="pull-left" style="margin-right: 10px;">
+                              <span class="glyphicon glyphicon glyphicon-star" style="position: relative; top: 2px;"></span> 4.8</h5>
+                                                    <!--                                                             <h5 class="pull-right">
+                                                                    <span class="glyphicon glyphicon-heart" style="position: relative; top: 2px;"></span> 2
+                                                                  </h5> -->
+                                                </div>
+                                                <div class="caption" style="margin-top: 10px; padding: 0px; overflow: auto;">
+
+                                                    <p style="clear: both; font-weight: bold; margin: 0px; pading: 0px; font-weight: bold;">{{studio[0].studioName}}</p>
+                                                    <p class="text-muted" style="padding: 0px; margin: 0px;">{{studio[0].studioLocation}}</p>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </data-owl-carousel>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid" style="background: #f5f5f5; margin-bottom: 10px;">
+                <div class="container">
+                    <div class="row" style="margin-top: 20px;">
+                        <div class="col-lg-12">
+                            <div style="color: #999; letter-spacing: 0.1em; font-size: 12px; overflow: auto;">
+                                <p class="pull-left"><span class="glyphicon glyphicon-star"></span> TOP VIEWED</p>
+                                <p class="pull-right">VIEW ALL</p>
+                            </div>
+                            <data-owl-carousel class="owl-carousel" data-options="{navigation: true, pagination: true, rewindNav : true}">
+                                <div owl-carousel-item="" ng-repeat="studio in allStudios" class="item">
+                                    <div class="thumbnail" style="padding: 0px; margin: 16px 2px; border: none;">
+                                        <!-- <img src="imgs/beard_man.jpg" class="img-rounded"> -->
+                                        <div style="background: url('imgs/beard_man3.jpeg'); background-size: cover; width: 100%; height: 140px; border-radius: 4px;"></div>
+                                        <div class="caption" style="padding: 0px; overflow: auto;">
+                                            <div style="position: absolute; bottom: 65px; width: 100%; padding: 5px 10px; color: #fff; border-bottom-left-radius: 4px;border-bottom-right-radius: 4px;">
+                                                <!--                                                                 <h5 class="pull-left" style="margin-right: 10px;">
+  <span class="glyphicon glyphicon glyphicon-star" style="position: relative; top: 2px;"></span> 4.8</h5> -->
+                                                <h5 class="pull-left">
+    <span class="glyphicon glyphicon-heart" style="position: relative; top: 2px;"></span> 2
+  </h5>
+                                            </div>
+                                            <div class="caption" style="margin-top: 10px; padding: 0px; overflow: auto;">
+
+                                                <p style="clear: both; font-weight: bold; margin: 0px; pading: 0px; font-weight: bold;">{{studio[0].studioName}}</p>
+                                                <p class="text-muted" style="padding: 0px; margin: 0px;">{{studio[0].studioLocation}}</p>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </data-owl-carousel>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="css/sidebar/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="css/sidebar/js/bootstrap.min.js"></script>
+    <script src="js/holder.js" charset="utf-8"></script>
+    <script src="js/holder.js" charset="utf-8"></script>
+    <script src="js/owl.carousel.js" charset="utf-8"></script>
+    <!-- Menu Toggle Script -->
+    <script>
+        $(function() {
+            $(".collapsed").click(function(e) {
+                e.preventDefault();
+                $("#wrapper").toggleClass("toggled");
+            });
+            $('.studio__owl-carousel-2').owlCarousel({
+                margin: 20,
+                items: 2,
+                stagePadding: 50,
+                merge: true,
+                loop: true,
+                responsive: {
+                    // breakpoint from 0 up
+                    0: {
+                        items: 2,
+                    },
+                    // breakpoint from 480 up
+                    480: {
+                        items: 2,
+                    },
+                    // breakpoint from 768 up
+                    768: {
+                        items: 8,
+                    },
+                    968: {
+                        items: 10,
+                    }
+                }
+            });
+        })
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="js/angular.min.js"></script>
+<head>
+
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+      <meta name="description" content="">
+      <meta name="author" content="">
+
+      <title>Sign Up</title>
+
+      <!-- Bootstrap Core CSS -->
+      <link href="css/sidebar/css/bootstrap.min.css" rel="stylesheet">
+
+      <!-- Custom CSS -->
+      <link href="css/sidebar/css/simple-sidebar.css" rel="stylesheet">
+      <link rel="stylesheet" href="css/main.css">
+
+      <link rel="stylesheet" href="js/assets/owl.carousel.min.css">
+      <link rel="stylesheet" href="js/assets/owl.theme.default.min.css">
+
+      <script type="text/javascript" src="/appStart/app/js/signUp.js"></script>
+      <script type="text/javascript" src="/appStart/app/js/app.js"></script>
+
+      <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body ng-app="signUp" ng-controller="signUpCtrl">
+
+      <div id="wrapper">
+
+            <!-- Page Content -->
+            <div id="page-content-wrapper" style="padding: 0px;">
+                  <nav class="navbar navbar-default navbar-fixed-top">
+                      <div class="container-fluid" style="padding: 0px; background: #16a085">
+                            <div class="container">
+                                  <ul class="list-inline primary-nav pull-left">
+                                        <li>
+                                              <a href="log_in.html">
+                                                    <span class="glyphicon glyphicon-remove"></span>
+                                              </a>
+                                        </li>
+                                  </ul>
+                                  <ul class="list-inline primary-nav pull-left">
+                                        <li><a href="">Sign up</a></li>
+                                  </ul>
+                            </div>
+                      </div>
+                  </nav>
+
+                  <div class="container-fluid" style="margin-top: 60px; margin-bottom: 10px;">
+                      <div class="container" style="padding: 20px 20px; color: #777">
+                          <!--<p><strong>Already have an account <a href="#"> Log in</a></strong></p>-->
+
+                          <form name = "signUpform" style="margin-top: 10px;" ng-submit="signUpform.$valid" novalidate>
+                                <div class="form-group">
+                                      <label for="exampleInputEmail1"><small>Name</small></label>
+                                      <input type="text" ng-change = "errorInForm = 0" name = "userName" class="form-control" id="exampleInputEmail1" ng-model='signUp.userName' required>
+                                </div>
+                                <div class="form-group">
+                                      <label for="exampleInputPassword1"><small>Email</small></label>
+                                      <input type="email" ng-change = "errorInForm = 0" class="form-control" id="exampleInputPassword1" ng-model='signUp.userEmail' required>
+                                </div>
+                                <div class="form-group">
+                                      <label for="exampleInputPassword1"><small>Phone Number</small></label>
+                                      <input type="text" ng-change = "errorInForm = 0" class="form-control" id="exampleInputPassword1" ng-model='signUp.userPhoneNumber' required>
+                                </div>
+                                <div class="form-group">
+                                      <label for="exampleInputPassword1"><small>Password</small></label>
+                                      <input type="password" ng-change = "errorInForm = 0" class="form-control" id="exampleInputPassword1" ng-model='signUp.userPassword' required>
+                                </div>
+                                <div class="form-group">
+                                      <label for="exampleInputPassword1"><small>Confirm Password</small></label>
+                                      <input type="password" ng-change = "errorInForm = 0" class="form-control" id="exampleInputPassword1" ng-model='signUp.confirmPassword' required>
+                                </div>
+                                <span ng-show="errorInForm" style="margin-top: 10px;color:red">{{errorMessage}}</span>
+                                <input type="submit" style="margin-top: 10px;" class="btn btn-primary btn-block" value="Create account" ng-click="signUp(signUp)">
+                        </form>
+                      </div>
+                  </div>
+            </div>
+            <!-- /#page-content-wrapper -->
+
+      </div>
+      <!-- /#wrapper -->
+
+      <!-- jQuery -->
+      <script src="css/sidebar/js/jquery.js"></script>
+
+      <!-- Bootstrap Core JavaScript -->
+      <script src="css/sidebar/js/bootstrap.min.js"></script>
+      <script src="js/holder.js" charset="utf-8"></script>
+      <script src="js/holder.js" charset="utf-8"></script>
+      <script src="js/owl.carousel.js" charset="utf-8"></script>
+      <!-- Menu Toggle Script -->
+      <script>
+      $(function(){
+          $(".collapsed").click(function(e) {
+                e.preventDefault();
+                $("#wrapper").toggleClass("toggled");
+          });
+          $('.studio__owl-carousel-2').owlCarousel({
+                margin: 12,
+                items: 2,
+                stagePadding: 50,
+                merge: true,
+                loop: true,
+                responsive: {
+                      // breakpoint from 0 up
+                      0: {
+                            items: 2,
+                      },
+                      // breakpoint from 480 up
+                      480: {
+                            items: 2,
+                      },
+                      // breakpoint from 768 up
+                      768: {
+                            items: 3,
+                      },
+                      968: {
+                            items: 5,
+                      }
+                }
+          });
+      })
+
+      </script>
+
+</body>
+
+</html>
