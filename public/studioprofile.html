@@ -2,7 +2,6 @@
 <html lang="en">
 <script src="js/angular.min.js"></script>
 <head>
-
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
@@ -126,7 +125,7 @@
                       <label for="exampleInputEmail1"><small>Works For</small></label>
                       <br/>
                       <span ng-repeat="events in allEvents">
-                        <input type="checkbox" ng-model = "studioProfile.allEvents[events.eventId]"> 
+                        <input type="checkbox" ng-model = "studioProfile.allEvents[events.eventId]">
                         {{events.eventType}}
                         <br/>
                       </span>
@@ -135,7 +134,7 @@
                       <label for="exampleInputEmail1"><small>Available On</small></label>
                        <br/>
                       <span ng-repeat="availability in allAvailabilities">
-                        <input type="radio" ng-model="studioProfile.selectedAvailability" ng-value="availability"> 
+                        <input type="radio" ng-model="studioProfile.selectedAvailability" ng-value="availability">
                         {{availability.availabilityType}}
                         <br/>
                       </span>
