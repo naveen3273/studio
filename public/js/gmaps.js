@@ -19,6 +19,7 @@
  *
  * Copyright 2017, Gustavo Leon
  * Released under the MIT License.
+ * This might be some change for New feature
  */
 
 var extend_object = function(obj, new_obj) {
