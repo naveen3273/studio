@@ -2,31 +2,32 @@
 <html lang="en">
 <script src="js/angular.min.js"></script>
 <title>Title change in the file</title>
+
 <head>
 
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
-      <meta name="description" content="">
-      <meta name="author" content="">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-      <title>New feature changes added again, again</title>
+  <title>New feature changes added again, again</title>
 
-      <!-- Bootstrap Core CSS -->
-      <link href="css/sidebar/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Core CSS -->
+  <link href="css/sidebar/css/bootstrap.min.css" rel="stylesheet">
 
-      <!-- Custom CSS -->
-      <link href="css/sidebar/css/simple-sidebar.css" rel="stylesheet">
-      <link rel="stylesheet" href="css/main.css">
+  <!-- Custom CSS -->
+  <link href="css/sidebar/css/simple-sidebar.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
 
-      <script type="text/javascript" src="/appStart/app/js/login.js"></script>
+  <script type="text/javascript" src="/appStart/app/js/login.js"></script>
 
-      <link rel="stylesheet" href="js/assets/owl.carousel.min.css">
-      <link rel="stylesheet" href="js/assets/owl.theme.default.min.css">
+  <link rel="stylesheet" href="js/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="js/assets/owl.theme.default.min.css">
 
-      <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-      <!--[if lt IE 9]>
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
@@ -35,80 +36,80 @@
 
 <body ng-app="loginModule" ng-controller="loginCtrl">
 
-      <div id="wrapper">
+  <div id="wrapper">
 
-            <!-- Page Content -->
-            <div id="page-content-wrapper" style="padding: 0px;">
-                  <nav class="navbar navbar-default navbar-fixed-top">
-                        <div class="container-fluid" style="padding: 0px; background: #16a085">
-                              <div class="container">
-                                    <ul class="list-inline primary-nav pull-left">
-                                          <li><a href="">Studio Finder, I want to change this, another change</a></li>
-                                    </ul>
+    <!-- Page Content -->
+    <div id="page-content-wrapper" style="padding: 0px;">
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid" style="padding: 0px; background: #16a085">
+          <div class="container">
+            <ul class="list-inline primary-nav pull-left">
+              <li><a href="">Studio Finder, I want to change this, another change</a></li>
+            </ul>
 
-                                    <ul class="list-inline primary-nav pull-right">
-                                          <li>
-                                                <a href="">
-                                                      <span class="glyphicon glyphicon-search"></span>
-                                                </a>
-                                          </li>
-                                    </ul>
-                              </div>
-                        </div>
-                        <div class="container-fluid" style="padding: 0px; border-bottom: 1px solid #f5f5f5;">
-                              <div class="container">
-                                    <ul class="list-inline">
-                                          <li><a href="index.html">Home</a></li>
-                                          <li><a href="allRequests.html">Requests</a></li>
-                                          <li class="active"><a href="">You</a></li>
-                                    </ul>
-                              </div>
-                        </div>
+            <ul class="list-inline primary-nav pull-right">
+              <li>
+                <a href="">
+                  <span class="glyphicon glyphicon-search"></span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="container-fluid" style="padding: 0px; border-bottom: 1px solid #f5f5f5;">
+          <div class="container">
+            <ul class="list-inline">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="allRequests.html">Requests</a></li>
+              <li class="active"><a href="">You</a></li>
+            </ul>
+          </div>
+        </div>
 
-                        <div class="container-fluid" style="padding: 0px;">
-                              <div class="container">
-                                    <ul class="list-inline secondary-nav">
-                                          <li ng-class="{'active': getCurrentView('userProfile')}"><a href="" ng-click="setView('userProfile')">Profile</a></li>
-                                          <li ng-class="{'active': getCurrentView('studioProfile')}"><a href="" ng-click="setView('studioProfile')">Studio</a></li>
-                                    </ul>
-                              </div>
-                        </div>
-                  </nav>
-                  <div class="container-fluid" style="margin-top: 140px; background: #f5f5f5; margin-bottom: 10px;" ng-show = "!isloggedIn()">
-                  <div class="container">
-                              <div class="row" style="margin: 10px -5;">
-                                    <div class="col-lg-12">
-                                          <div class="media">
-                                                <div class="media-body">
-                                                <h4 class="media-heading">Please <a href="log_in.html">login</a> to view your profile and studio.</h4>
-                                                </div>
-                                          </div>
-                                    </div>
-                              </div>
-                  </div>
-                  </div>
-                  <div class="container-fluid" style="margin-top: 140px; background: #f5f5f5; margin-bottom: 10px;" ng-show = "isloggedIn()">
-                        <div class="container" ng-show = "getCurrentView('userProfile')">
-                              <div class="row" style="margin: 10px -5;">
-                                    <div class="col-lg-12">
-                                          <div class="media">
-                                                <div class="media-body">
-                                                      <h4 class="media-heading">{{currentUserName}}</h4>
-                                                      <h6 class="media-heading" style="text-align: right">Updated On {{lastUpdatedOn}}</h6>
-                                                      <form name = "signUpform" style="margin-top: 10px;" ng-submit="signUpform.$valid" novalidate>
-                                                        <div class="form-group">
-                                                              <label for="exampleInputEmail1"><small>Name</small></label>
-                                                              <input type="text" ng-change = "errorInForm = 0" name = "userName" class="form-control" id="exampleInputEmail1" ng-model='userName' required>
-                                                        </div>
-                                                        <div class="form-group">
-                                                              <label for="exampleInputPassword1"><small>Email</small></label>
-                                                              <input type="email" ng-change = "errorInForm = 0" class="form-control" id="exampleInputPassword1" ng-model='userEmail' required>
-                                                        </div>
-                                                        <div class="form-group">
-                                                              <label for="exampleInputPassword1"><small>Phone Number</small></label>
-                                                              <input type="text" ng-change = "errorInForm = 0" class="form-control" id="exampleInputPassword1" ng-model='userPhoneNumber' required>
-                                                        </div>
-                                                        <!--
+        <div class="container-fluid" style="padding: 0px;">
+          <div class="container">
+            <ul class="list-inline secondary-nav">
+              <li ng-class="{'active': getCurrentView('userProfile')}"><a href="" ng-click="setView('userProfile')">Profile</a></li>
+              <li ng-class="{'active': getCurrentView('studioProfile')}"><a href="" ng-click="setView('studioProfile')">Studio</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="container-fluid" style="margin-top: 140px; background: #f5f5f5; margin-bottom: 10px;" ng-show="!isloggedIn()">
+        <div class="container">
+          <div class="row" style="margin: 10px -5;">
+            <div class="col-lg-12">
+              <div class="media">
+                <div class="media-body">
+                  <h4 class="media-heading">Please <a href="log_in.html">login</a> to view your profile and studio.</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid" style="margin-top: 140px; background: #f5f5f5; margin-bottom: 10px;" ng-show="isloggedIn()">
+        <div class="container" ng-show="getCurrentView('userProfile')">
+          <div class="row" style="margin: 10px -5;">
+            <div class="col-lg-12">
+              <div class="media">
+                <div class="media-body">
+                  <h4 class="media-heading">{{currentUserName}}</h4>
+                  <h6 class="media-heading" style="text-align: right">Updated On {{lastUpdatedOn}}</h6>
+                  <form name="signUpform" style="margin-top: 10px;" ng-submit="signUpform.$valid" novalidate>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1"><small>Name</small></label>
+                      <input type="text" ng-change="errorInForm = 0" name="userName" class="form-control" id="exampleInputEmail1" ng-model='userName' required>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1"><small>Email</small></label>
+                      <input type="email" ng-change="errorInForm = 0" class="form-control" id="exampleInputPassword1" ng-model='userEmail' required>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1"><small>Phone Number</small></label>
+                      <input type="text" ng-change="errorInForm = 0" class="form-control" id="exampleInputPassword1" ng-model='userPhoneNumber' required>
+                    </div>
+                    <!--
                                                         <div class="form-group">
                                                               <label for="exampleInputPassword1"><small>Change Password</small></label>
                                                               <input type="password" ng-change = "errorInForm = 0" class="form-control" id="exampleInputPassword1" ng-model='userPassword' required>
@@ -118,55 +119,55 @@
                                                               <input type="password" ng-change = "errorInForm = 0" class="form-control" id="exampleInputPassword1" ng-model='confirmPassword' required>
                                                         </div>
                                                         -->
-                                                        <span ng-show="errorInForm" style="margin-top: 10px;color:red">{{errorMessage}}</span>
-                                                        <input type="submit" style="margin-top: 10px;" class="btn btn-primary btn-block" value="Update Details" ng-click="updateDetails(userName,userEmail,userPhoneNumber)">
-                                                </form>
-                                                </div>
-                                          </div>
-                                    </div>
-                              </div>
-                        </div>
-                         <div class="container" ng-show="!isStudioExistsWithUser() && getCurrentView('studioProfile')">
-                              <div class="row" style="margin: 10px -5;">
-                                    <div class="col-lg-12">
-                                          <div class="media">
-                                                <div class="media-body">
-                                                <h4 class="media-heading">You do not have studio linked with this account.</h4>
-                                                <h4 class="media-heading">Click <a href ="studioprofile.html">here</a> to create account</h4>
-                                                </div>
-                                          </div>
-                                    </div>
-                              </div>
-                          </div>
-                        <div class="container" ng-show = "getCurrentView('studioProfile') && isStudioExistsWithUser()">
-                              <div class="row" style="margin: 10px -5;">
-                                    <div class="col-lg-12">
-                                          <div class="media">
-                                                <!--
+                    <span ng-show="errorInForm" style="margin-top: 10px;color:red">{{errorMessage}}</span>
+                    <input type="submit" style="margin-top: 10px;" class="btn btn-primary btn-block" value="Update Details" ng-click="updateDetails(userName,userEmail,userPhoneNumber)">
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container" ng-show="!isStudioExistsWithUser() && getCurrentView('studioProfile')">
+          <div class="row" style="margin: 10px -5;">
+            <div class="col-lg-12">
+              <div class="media">
+                <div class="media-body">
+                  <h4 class="media-heading">You do not have studio linked with this account.</h4>
+                  <h4 class="media-heading">Click <a href="studioprofile.html">here</a> to create account</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container" ng-show="getCurrentView('studioProfile') && isStudioExistsWithUser()">
+          <div class="row" style="margin: 10px -5;">
+            <div class="col-lg-12">
+              <div class="media">
+                <!--
                                                 <div class="media-left">
                                                       <a href="#">
                                                             <img class="media-object img-circle" src="imgs/beard_man2.jpg" style="width: 64px; height: 64px;"alt="...">
                                                       </a>
                                                 </div>
                                                 -->
-                                                <div class="media-body">
-                                                      <h4 class="media-heading">{{getStudioDetails.studioName}}</h4>
-                                                      <form name="studioProfileform" ng-submit="studioProfileform.$valid" novalidate>
+                <div class="media-body">
+                  <h4 class="media-heading">{{getStudioDetails.studioName}}</h4>
+                  <form name="studioProfileform" ng-submit="studioProfileform.$valid" novalidate>
                     <div class="form-group">
                       <label for="exampleInputEmail1"><small>Studio Name</small></label>
-                      <input type="text" class="form-control" name = "studioName" id="exampleInputEmail1" ng-model="getStudioDetails.studioName" required>
+                      <input type="text" class="form-control" name="studioName" id="exampleInputEmail1" ng-model="getStudioDetails.studioName" required>
                     </div>
                     <div class="form-group">
                       <label for="exampleInputPassword1"><small>Location</small></label>
-                      <input type="text" class="form-control" name = "studioLocation"  id="exampleInputPassword1" ng-model="getStudioDetails.studioLocation" required>
+                      <input type="text" class="form-control" name="studioLocation" id="exampleInputPassword1" ng-model="getStudioDetails.studioLocation" required>
                     </div>
                     <div class="form-group">
                       <label for="exampleInputPassword1"><small>Facebook Page Url</small></label>
-                      <input type="text" class="form-control" name = "studioFacebookProfileuUrl"   ng-model="getStudioDetails.studioFacebookProfileuUrl" required>
+                      <input type="text" class="form-control" name="studioFacebookProfileuUrl" ng-model="getStudioDetails.studioFacebookProfileuUrl" required>
                     </div>
                     <div class="form-group">
                       <label for="exampleInputPassword1"><small>Official Portfolio / Website</small></label>
-                      <input type="text" class="form-control" name = "studioOfficialUrl" ng-model="getStudioDetails.studioOfficialUrl" required>
+                      <input type="text" class="form-control" name="studioOfficialUrl" ng-model="getStudioDetails.studioOfficialUrl" required>
                     </div>
                     <div class="form-group">
                       <label for="exampleInputEmail1"><small>Email Address</small></label>
@@ -192,13 +193,13 @@
                       </span> -->
                     </div>
                   </form>
-                                                </div>
-                                          </div>
-                                    </div>
-                              </div>
-                        </div>
-                  </div>
-                  <!--
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--
                   <div class="container-fluid" style="background: #f5f5f5; margin-bottom: 10px;">
                         <div class="container">
                               <div class="row" style="margin-top: 20px;">
@@ -225,53 +226,53 @@
                         </div>
                   </div>
                   -->
-            </div>
-            <!-- /#page-content-wrapper -->
+    </div>
+    <!-- /#page-content-wrapper -->
 
-      </div>
-      <!-- /#wrapper -->
+  </div>
+  <!-- /#wrapper -->
 
-      <!-- jQuery -->
-      <script src="css/sidebar/js/jquery.js"></script>
+  <!-- jQuery -->
+  <script src="css/sidebar/js/jquery.js"></script>
 
-      <!-- Bootstrap Core JavaScript -->
-      <script src="css/sidebar/js/bootstrap.min.js"></script>
-      <script src="js/holder.js" charset="utf-8"></script>
-      <script src="js/holder.js" charset="utf-8"></script>
-      <script src="js/owl.carousel.js" charset="utf-8"></script>
-      <!-- Menu Toggle Script -->
-      <script>
-            $(function() {
-                  $(".collapsed").click(function(e) {
-                        e.preventDefault();
-                        $("#wrapper").toggleClass("toggled");
-                  });
-                  $('.studio__owl-carousel-2').owlCarousel({
-                        margin: 12,
-                        items: 2,
-                        stagePadding: 50,
-                        merge: true,
-                        loop: true,
-                        responsive: {
-                              // breakpoint from 0 up
-                              0: {
-                                    items: 2,
-                              },
-                              // breakpoint from 480 up
-                              480: {
-                                    items: 2,
-                              },
-                              // breakpoint from 768 up
-                              768: {
-                                    items: 3,
-                              },
-                              968: {
-                                    items: 5,
-                              }
-                        }
-                  });
-            })
-      </script>
+  <!-- Bootstrap Core JavaScript -->
+  <script src="css/sidebar/js/bootstrap.min.js"></script>
+  <script src="js/holder.js" charset="utf-8"></script>
+  <script src="js/holder.js" charset="utf-8"></script>
+  <script src="js/owl.carousel.js" charset="utf-8"></script>
+  <!-- Menu Toggle Script -->
+  <script>
+    $(function() {
+      $(".collapsed").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+      });
+      $('.studio__owl-carousel-2').owlCarousel({
+        margin: 12,
+        items: 2,
+        stagePadding: 50,
+        merge: true,
+        loop: true,
+        responsive: {
+          // breakpoint from 0 up
+          0: {
+            items: 2,
+          },
+          // breakpoint from 480 up
+          480: {
+            items: 2,
+          },
+          // breakpoint from 768 up
+          768: {
+            items: 3,
+          },
+          968: {
+            items: 5,
+          }
+        }
+      });
+    })
+  </script>
 
 </body>
 
